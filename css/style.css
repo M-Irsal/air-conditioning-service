@@ -625,6 +625,22 @@
     }
   }
 
+    .hero {
+    min-height: 70vh; /* Kurangi tinggi hero di mobile */
+    padding: 1rem;
+    }
+    
+    .slide {
+        background-size: cover;
+        background-position: center center; /* Pastikan gambar tetap terpusat */
+    }
+
+     @media (max-aspect-ratio: 3/4) {
+    .slide {
+      background-size: cover; /* Tetap pakai cover untuk mengisi layar */
+    }
+  }
+
   /* Perbaikan untuk layar sangat kecil (max-width: 480px) */
   @media (max-width: 480px) {
     .form-container {
@@ -665,6 +681,18 @@
       font-weight: normal;
       color: var(--text);
     }
+
+    .hero {
+    min-height: 60vh; /* Lebih pendek untuk layar kecil */
+    }
+    
+    .hero h1 {
+        font-size: 2rem; /* Perkecil font agar tidak terlalu besar */
+    }
+    
+    .hero p {
+        font-size: 1rem;
+    }
   }
 
   /* Perbaikan untuk landscape mode */
@@ -678,4 +706,14 @@
     .form-group {
       margin-bottom: 0.75rem;
     }
+
+    .hero {
+    min-height: 100vh; /* Kembalikan tinggi di landscape */
+    padding: 3rem 1rem;
+    }
+  
+    .slide {
+        background-size: cover;
+    }
   }
+
