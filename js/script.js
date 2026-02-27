@@ -80,8 +80,8 @@
       if (!valid) return;
 
       // format pesan WA
-      const waNumber = '6281234567890'; // ganti dengan nomor tujuan
-      const text = `Halo CoolTech, saya ${name} ingin pesan layanan:
+      const waNumber = '6288210749273'; // ganti dengan nomor tujuan
+      const text = `Halo Paris Teknik Air Conditioner, saya ${name} ingin pesan layanan:
 • Layanan: ${service}
 • Alamat: ${address}
 • No WA: ${phone}
