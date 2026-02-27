@@ -125,27 +125,6 @@
       box-shadow: 0 10px 20px rgba(239, 68, 68, 0.2);
     }
 
-    /* Responsive untuk mobile */
-@media (max-width: 768px) {
-  .komplain-button {
-    width: 100%;
-    text-align: center;
-    margin-top: 0.5rem;
-    margin-bottom: 0.5rem;
-    margin-left: 5.7rem;
-  }
-  
-  /* Beri jarak antar button di navbar */
-  .nav-menu li {
-    margin-bottom: 0.5rem;
-  }
-  
-  /* Khusus untuk button pesan sekarang */
-  .cta-button {
-    margin-top: 0.25rem;
-  }
-}
-
     /* Dropdown styles */
 .dropdown {
   position: relative;
@@ -200,62 +179,6 @@
   width: 20px;
   color: var(--primary);
 }
-
-/* Mobile responsive */
-@media (max-width: 768px) {
-  .dropdown {
-    width: 100%;
-  }
-  
-  .dropdown-menu {
-    position: static;
-    width: 100%;
-    box-shadow: none;
-    margin-top: 1rem;
-    margin-bottom: 0.5rem;
-    background-color: var(--gray-light);
-  }
-  
-  .dropdown-menu li a {
-    padding: 0.75rem 2rem;
-  }
-}
-
-/* Perbaikan button modal untuk mobile */
-@media (max-width: 768px) {
-  /* Target container button di modal */
-  div[style*="position: fixed"] div[style*="display: flex; gap: 1rem;"] {
-    flex-direction: column !important;
-    gap: 0.75rem !important;
-  }
-  
-  /* Target semua button di modal */
-  div[style*="position: fixed"] button {
-    width: 100% !important;
-    flex: none !important;
-    padding: 0.75rem 1rem !important;
-    font-size: 1rem !important;
-    margin: 0 !important;
-  }
-  
-  /* Perkecil padding container modal */
-  div[style*="position: fixed"] div[style*="background: white; padding: 2rem;"] {
-    padding: 1.5rem !important;
-  }
-}
-
-/* Untuk layar sangat kecil */
-@media (max-width: 480px) {
-  div[style*="position: fixed"] div[style*="background: white; padding: 2rem;"] {
-    padding: 1.2rem !important;
-  }
-  
-  div[style*="position: fixed"] button {
-    padding: 0.7rem 0.9rem !important;
-    font-size: 0.95rem !important;
-  }
-}
-
     /* hero dengan slideshow background */
     .hero {
       position: relative;
@@ -681,6 +604,9 @@
 
      /* responsive */
   @media (max-width: 768px) {
+    html {
+    scroll-padding-top: 70px;
+  }
     .navbar {
       padding: 1rem;
     }
@@ -772,9 +698,8 @@
       bottom: 80px;
       right: 20px;
     }
-  }
 
-    .hero {
+     .hero {
     min-height: 70vh; /* Kurangi tinggi hero di mobile */
     padding: 1rem;
     }
@@ -786,6 +711,62 @@
 
     .logo {
     font-size: 1.3rem; /* Sedikit perkecil untuk tablet */
+  }
+
+  .komplain-button {
+    width: 100%;
+    text-align: center;
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    margin-left: 5.7rem;
+  }
+  
+  /* Beri jarak antar button di navbar */
+  .nav-menu li {
+    margin-bottom: 0.5rem;
+  }
+  
+  /* Khusus untuk button pesan sekarang */
+  .cta-button {
+    margin-top: 0.25rem;
+  }
+
+   .dropdown {
+    width: 100%;
+  }
+  
+  .dropdown-menu {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    background-color: var(--gray-light);
+  }
+  
+  .dropdown-menu li a {
+    padding: 0.75rem 2rem;
+  }
+
+  /* Target container button di modal */
+  div[style*="position: fixed"] div[style*="display: flex; gap: 1rem;"] {
+    flex-direction: column !important;
+    gap: 0.75rem !important;
+  }
+  
+  /* Target semua button di modal */
+  div[style*="position: fixed"] button {
+    width: 100% !important;
+    flex: none !important;
+    padding: 0.75rem 1rem !important;
+    font-size: 1rem !important;
+    margin: 0 !important;
+  }
+  
+  /* Perkecil padding container modal */
+  div[style*="position: fixed"] div[style*="background: white; padding: 2rem;"] {
+    padding: 1.5rem !important;
+  }
   }
 
      @media (max-aspect-ratio: 3/4) {
@@ -849,6 +830,8 @@
     .logo {
     font-size: 1.3rem; /* Sedikit perkecil untuk tablet */
   }
+
+  
   }
 
   /* Perbaikan untuk landscape mode */
