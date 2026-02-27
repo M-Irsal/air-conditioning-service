@@ -635,6 +635,10 @@
         background-position: center center; /* Pastikan gambar tetap terpusat */
     }
 
+    .logo {
+    font-size: 1.3rem; /* Sedikit perkecil untuk tablet */
+  }
+
      @media (max-aspect-ratio: 3/4) {
     .slide {
       background-size: cover; /* Tetap pakai cover untuk mengisi layar */
@@ -693,6 +697,9 @@
     .hero p {
         font-size: 1rem;
     }
+    .logo {
+    font-size: 1.3rem; /* Sedikit perkecil untuk tablet */
+  }
   }
 
   /* Perbaikan untuk landscape mode */
@@ -716,4 +723,10 @@
         background-size: cover;
     }
   }
+
+  @media (min-width: 1400px) {
+  .slide {
+    background-position: center 30%; /* Geser lebih turun untuk layar sangat lebar */
+  }
+}
 
