@@ -79,7 +79,8 @@
 
       if (!valid) return;
 
-     // Format pesan WA dengan nama perusahaan yang benar
+      // format pesan WA
+      const waNumber = '6288210749273'; // ganti dengan nomor tujuan
       const text = `Halo Paris Teknik Air Conditioner, saya ${name} ingin pesan layanan:
 • Layanan: ${service}
 • Alamat: ${address}
@@ -87,10 +88,6 @@
 • Pesan: ${message || '-'}
 
 Mohon info lebih lanjut. Terima kasih.`;
-      
-      // Encode pesan untuk URL
       const encoded = encodeURIComponent(text);
-      
-      // Buka WhatsApp dengan pesan yang sudah diisi
       window.open(`https://wa.me/${waNumber}?text=${encoded}`, '_blank');
     });
