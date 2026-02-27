@@ -5,18 +5,46 @@
       navMenu.classList.toggle('active');
     });
 
-    // === smooth scrolling untuk semua link (cegah default) + tutup menu ===
-    document.querySelectorAll('.nav-menu a, .btn-primary, .btn-outline[href^="#"]').forEach(link => {
-      link.addEventListener('click', function(e) {
-        const href = this.getAttribute('href');
-        if (href && href.startsWith('#')) {
-          e.preventDefault();
-          const target = document.querySelector(href);
-          if(target) target.scrollIntoView({ behavior: 'smooth' });
-          if (navMenu.classList.contains('active')) navMenu.classList.remove('active');
+   // === smooth scrolling dengan offset yang pas di semua section ===
+document.querySelectorAll('.nav-menu a, .btn-primary, .btn-outline[href^="#"]').forEach(link => {
+  link.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href && href.startsWith('#')) {
+      e.preventDefault();
+      
+      const target = document.querySelector(href);
+      
+      if (target) {
+        // Dapatkan tinggi navbar
+        const navbar = document.querySelector('.navbar');
+        const navbarHeight = navbar ? navbar.offsetHeight : 0;
+        
+        // Tentukan offset berdasarkan ukuran layar
+        let offset = 20; // default tambahan
+        
+        if (window.innerWidth <= 768) {
+          offset = 15; // lebih kecil untuk mobile
+        } else {
+          offset = 25; // lebih besar untuk desktop
         }
-      });
-    });
+        
+        // Hitung posisi target (dikurangi tinggi navbar + offset)
+        const targetPosition = target.offsetTop - navbarHeight - offset;
+        
+        // Scroll ke posisi yang sudah dikalkulasi
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+        
+        // Tutup menu hamburger jika di mobile
+        if (navMenu.classList.contains('active')) {
+          navMenu.classList.remove('active');
+        }
+      }
+    }
+  });
+});
 
     // === animasi scroll fade-in ===
     const faders = document.querySelectorAll('.fade-in');

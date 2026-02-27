@@ -730,3 +730,22 @@
   }
 }
 
+/* Smooth scroll dengan padding yang aman */
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 90px; /* Nilai aman untuk desktop */
+}
+
+/* Tablet */
+@media (min-width: 769px) and (max-width: 1024px) {
+  html {
+    scroll-padding-top: 80px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  html {
+    scroll-padding-top: 70px;
+  }
+}
