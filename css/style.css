@@ -67,6 +67,12 @@
       font-size: 2rem;
     }
 
+    .logo-icon {
+      width: 40px;
+      height: 40px;
+      object-fit: contain; /* Biar gambar tidak terdistorsi */
+    }
+
     .nav-menu {
       display: flex;
       align-items: center;
@@ -607,6 +613,10 @@
     html {
     scroll-padding-top: 70px;
   }
+    .logo-icon {
+      width: 32px;
+      height: 32px;
+    }
     .navbar {
       padding: 1rem;
     }
@@ -830,8 +840,10 @@
     .logo {
     font-size: 1.3rem; /* Sedikit perkecil untuk tablet */
   }
-
-  
+    .logo-icon {
+    width: 28px;
+    height: 28px;
+  }
   }
 
   /* Perbaikan untuk landscape mode */
